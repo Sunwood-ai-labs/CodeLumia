@@ -8,7 +8,7 @@ def clone_repository(repo_url, repo_name):
     #     shutil.rmtree("/tmp")
 
     # tmpフォルダを作成
-    os.makedirs("/tmp")
+    os.makedirs("/tmp", exist_ok=True)
 
     # リポジトリのクローン
     repo_path = f"/tmp/{repo_name}"
