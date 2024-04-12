@@ -27,6 +27,30 @@ license: mit
 
 ## 🚀 はじめに
 
+
+CodeLumiaへようこそ！CodeLumiaは、GitHubリポジトリのソースコードを分析し、包括的なマークダウン形式のドキュメントを自動生成するツールです。プロジェクトの構造、依存関係、設定などを簡単に理解できるようになります。
+
+CodeLumiaは、開発者がコードベースをすばやく把握し、プロジェクトに効率的に貢献できるようにすることを目的としています。新しいチームメンバーのオンボーディングを容易にし、コードの保守性を向上させます。
+
+>[!TIP]
+>このリポジトリは[SourceSage](https://github.com/Sunwood-ai-labs/SourceSage)を活用しており、リリースノートやREADME、コミットメッセージの9割は[SourceSage](https://github.com/Sunwood-ai-labs/SourceSage) ＋ [claude.ai](https://claude.ai/)で生成しています。
+
+### 主な特徴:
+
+- GitHubリポジトリの自動分析
+- マークダウン形式のドキュメント生成
+- ファイルとディレクトリの無視パターンのカスタマイズ
+- わかりやすいStreamlitユーザーインターフェース
+
+CodeLumiaを使用して、プロジェクトのドキュメンテーションを強化し、チームのコラボレーションを促進しましょう。ぜひお試しください！
+
+
+## デモアプリ
+
+[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/OFA-Sys/OFA-Image_Caption)
+
+
+
 ### 前提条件
 
 - Docker
