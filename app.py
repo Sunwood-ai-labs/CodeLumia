@@ -38,13 +38,14 @@ if repo_url:
     markdown_content = create_markdown_content(repo_name, file_tree, repo_path, ignore_patterns)
 
     # マークダウンファイルを保存
-    save_markdown_file("__CodeLumiai.md", markdown_content)
+    output_name =  "/tmp/__CodeLumiai"
+    save_markdown_file(output_name, markdown_content)
 
     # Streamlitアプリケーションの構築
     st.markdown(markdown_content, unsafe_allow_html=True)
 
     # ダウンロードリンクの作成
-    st.markdown(f'<a href="data:text/markdown;base64,{base64.b64encode(markdown_content.encode("utf-8")).decode("utf-8")}" download="{repo_name}.md">Download Markdown File</a>', unsafe_allow_html=True)
+    st.markdown(f'<a href="data:text/markdown;base64,{base64.b64encode(markdown_content.encode("utf-8")).decode("utf-8")}" download="{output_name}.md">Download Markdown File</a>', unsafe_allow_html=True)
 
     st.markdown("---")
     st.markdown("# Full Text")
