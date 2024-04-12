@@ -53,7 +53,7 @@ CodeLumiaを使用して、プロジェクトのドキュメンテーション�
 
 ## 更新履歴
 
-### [2024/04/13] CodeLumia v0.2.0
+### [[2024/04/13] CodeLumia v0.2.0](https://github.com/Sunwood-ai-labs/CodeLumia/releases/tag/v0.2.0)
 
 - コードのリファクタリングによる可読性と保守性の向上
 - リポジトリのURLを入力してファイルツリーとコードを表示する機能追加
