@@ -1,18 +1,5 @@
----
-title: CodeLumia
-emoji: 📚
-colorFrom: purple
-colorTo: blue
-sdk: docker
-sdk_version: 1.33.0
-app_file: app.py
-pinned: false
-license: mit
----
-
-
 <p align="center">
-<img src="https://media.githubusercontent.com/media/Sunwood-ai-labs/CodeLumia/main/docs/CodeLumia_icon.png" width="50%">
+<img src="https://media.githubusercontent.com/media/Sunwood-ai-labs/CodeLumia/main/docs/CodeLumia_icon.png" width="40%">
 <br>
 <h1 align="center">CodeLumia</h1>
 <h3 align="center">
@@ -23,4 +10,3 @@ license: mit
 </h3>
 
 </p>
-
