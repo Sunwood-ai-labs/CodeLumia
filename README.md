@@ -49,7 +49,7 @@ CodeLumiaを使用して、プロジェクトのドキュメンテーション�
 
 [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/OFA-Sys/OFA-Image_Caption)
 
-![]()
+![](https://github.com/Sunwood-ai-labs/CodeLumia/blob/develop/docs/demo.gif?raw=true)
 
 ## 更新履歴
 
