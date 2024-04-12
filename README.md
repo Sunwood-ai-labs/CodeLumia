@@ -24,3 +24,72 @@ license: mit
 
 </p>
 
+
+## 🚀 はじめに
+
+### 前提条件
+
+- Docker
+- Docker Compose
+
+### インストール
+
+1. リポジトリをクローンします:
+   ```bash
+   git clone https://github.com/Sunwood-ai-labs/CodeLumia.git
+   cd CodeLumia
+   ```
+
+2. Dockerコンテナをビルドして実行します:
+   ```bash
+   docker-compose up --build
+   ```
+
+3. ブラウザで `http://localhost:8501` にアクセスしてアプリケーションを開きます。
+
+## 📖 使い方
+
+1. 分析したいGitHubリポジトリのURLをテキスト入力フィールドに入力します。
+2. アプリケーションがリポジトリをクローンし、ファイルを処理して、マークダウンのドキュメントファイルを生成します。
+3. 生成されたドキュメントがStreamlitアプリに表示されます。
+4. "Download Markdown File"リンクをクリックして、マークダウンファイルをダウンロードできます。
+
+>[!TIP]
+>Full Textのところからクリップボードにコピーすることもできます
+
+
+## 🔧 設定
+
+- `.CodeLumiaignore`ファイルには、ドキュメント生成プロセス中に無視する特定のファイルとディレクトリのパターンが含まれています。これらのパターンは、Streamlitアプリのサイドバーで編集できます。
+
+## 📂 プロジェクト構造
+
+```
+CodeLumia/
+├─ .github/
+│  └─ workflows/
+│     └─ run.yaml
+├─ docs/
+│  ├─ language_map.json
+│  ├─ page_front.md
+│  └─ SourceSageDocs.md
+├─ modules/
+│  ├─ file_operations.py
+│  ├─ git_operations.py
+│  └─ markdown_operations.py
+├─ app.py
+├─ CodeLumia.md
+├─ docker-compose.yml
+├─ Dockerfile
+├─ README.md
+└─ requirements.txt
+```
+
+## 🤝 コントリビューション
+
+コントリビューションは大歓迎です！問題を見つけたり、改善のための提案がある場合は、issueを開くかプルリクエストを送ってください。
+
+## 📄 ライセンス
+
+このプロジェクトは[MITライセンス](LICENSE)の下で公開されています。
+```
