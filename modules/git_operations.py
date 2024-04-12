@@ -4,8 +4,8 @@ import time
 
 def clone_repository(repo_url, repo_name):
     # tmpフォルダを削除
-    if os.path.exists("/tmp"):
-        shutil.rmtree("/tmp")
+    # if os.path.exists("/tmp"):
+    #     shutil.rmtree("/tmp")
 
     # tmpフォルダを作成
     os.makedirs("/tmp")

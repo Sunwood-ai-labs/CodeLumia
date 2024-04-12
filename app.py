@@ -38,7 +38,7 @@ if repo_url:
     markdown_content = create_markdown_content(repo_name, file_tree, repo_path, ignore_patterns)
 
     # マークダウンファイルを保存
-    save_markdown_file(repo_name, markdown_content)
+    save_markdown_file("__CodeLumiai.md", markdown_content)
 
     # Streamlitアプリケーションの構築
     st.markdown(markdown_content, unsafe_allow_html=True)
