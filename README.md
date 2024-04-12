@@ -50,6 +50,19 @@ CodeLumiaを使用して、プロジェクトのドキュメンテーション�
 [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/OFA-Sys/OFA-Image_Caption)
 
 
+![](https://github.com/Sunwood-ai-labs/CodeLumia/blob/develop/docs/demo.gif?raw=true)
+
+## 更新履歴
+
+### [[2024/04/13] CodeLumia v0.2.0](https://github.com/Sunwood-ai-labs/CodeLumia/releases/tag/v0.2.0)
+
+- コードのリファクタリングによる可読性と保守性の向上
+- リポジトリのURLを入力してファイルツリーとコードを表示する機能追加
+- ユーザーインターフェースの改善とドキュメンテーションの拡充
+- CI/CDの設定とREADMEファイルの更新
+
+### [2024/04/12] CodeLumia v0.1.0
+- 初回リリース
 
 ### 前提条件
 
