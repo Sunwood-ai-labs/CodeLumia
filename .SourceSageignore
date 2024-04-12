@@ -27,3 +27,4 @@ build
 .gitattributes
 .CodeLumiaignore
 tmp
+.CodeLumiaignore
