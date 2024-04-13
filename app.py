@@ -28,7 +28,7 @@ st.markdown("---")
 st.markdown("[Full Text](#full-text)")
 
 # .gitignoreのパターンを編集するサイドバー
-st.sidebar.title(".gitignore Patterns")
+st.sidebar.title(".CodeLumiaignore Patterns")
 ignore_patterns = st.sidebar.text_area("Enter patterns (one per line):", value="\n".join(ignore_patterns), height=600).split("\n")
 # 探索の最大深度を入力するテキストボックス
 max_depth = st.sidebar.number_input("探索の最大深度:", min_value=1, value=2, step=1)
