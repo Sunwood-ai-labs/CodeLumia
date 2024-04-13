@@ -1,13 +1,16 @@
 import os
 import fnmatch
 
-def get_file_tree(repo_path, ignore_patterns):
+def get_file_tree(repo_path, ignore_patterns, max_depth):
     file_tree = ""
     for root, dirs, files in os.walk(repo_path):
         # .gitignoreに一致するディレクトリを無視
         dirs[:] = [d for d in dirs if not any(fnmatch.fnmatch(d, pattern) for pattern in ignore_patterns)]
         
         level = root.replace(repo_path, "").count(os.sep)
+        if level > max_depth:
+            continue
+        
         indent = " " * 4 * (level)
         file_tree += f"{indent}{os.path.basename(root)}/\n"
         subindent = " " * 4 * (level + 1)
@@ -17,11 +20,16 @@ def get_file_tree(repo_path, ignore_patterns):
                 file_tree += f"{subindent}{f}\n"
     return file_tree
 
-def process_files(repo_path, ignore_patterns):
+def process_files(repo_path, ignore_patterns, max_depth):
     file_contents = []
     for root, dirs, files in os.walk(repo_path):
         # .gitignoreに一致するディレクトリを無視
         dirs[:] = [d for d in dirs if not any(fnmatch.fnmatch(d, pattern) for pattern in ignore_patterns)]
+        
+        level = root.replace(repo_path, "").count(os.sep)
+        if level > max_depth:
+            continue
+        
         for file in files:
             # .gitignoreに一致するファイルを無視
             if not any(fnmatch.fnmatch(file, pattern) for pattern in ignore_patterns):

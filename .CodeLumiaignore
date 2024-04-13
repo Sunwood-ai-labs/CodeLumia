@@ -168,3 +168,6 @@ SourceSageAssets
 LICENSE
 .github
 *.png
+*.sqlite
+*.jpg
+requirements.txt

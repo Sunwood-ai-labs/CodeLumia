@@ -2,14 +2,14 @@ import json
 from modules.file_operations import get_file_tree, process_files
 import os
 
-def create_markdown_content(repo_name, file_tree, repo_path, ignore_patterns):
+def create_markdown_content(repo_name, file_tree, repo_path, ignore_patterns, max_depth):
     markdown_content = f"# << {repo_name}>> \n## {repo_name} File Tree\n\n```\n{file_tree}\n```\n\n"
 
     # 拡張子と言語のマッピングを読み込む
     with open("docs/language_map.json", "r") as f:
         language_map = json.load(f)
 
-    file_contents = process_files(repo_path, ignore_patterns)
+    file_contents = process_files(repo_path, ignore_patterns, max_depth)
     for file_path, content in file_contents:
         _, file_extension = os.path.splitext(file_path)
         language = language_map.get(file_extension, "")

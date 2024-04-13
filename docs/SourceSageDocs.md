@@ -2,5 +2,5 @@
 
 ```bash
 
-sourcesage --repository CodeLumia --owner Sunwood-ai-labs
+sourcesage --repository CodeLumia --owner Sunwood-ai-labs --ignore .SourceSageignore
 ```
