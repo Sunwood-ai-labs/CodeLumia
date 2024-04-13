@@ -170,3 +170,6 @@ LICENSE
 *.png
 *.jpg
 *.ipynb
+*.sqlite
+*.jpg
+requirements.txt

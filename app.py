@@ -25,17 +25,21 @@ st.markdown("---")
 # リポジトリのURLを入力するテキストボックス
 repo_url = st.text_input("リポジトリのURL:")
 st.markdown("---")
+st.markdown("[Full Text](#full-text)")
 
 # .gitignoreのパターンを編集するサイドバー
 st.sidebar.title(".gitignore Patterns")
 ignore_patterns = st.sidebar.text_area("Enter patterns (one per line):", value="\n".join(ignore_patterns), height=600).split("\n")
+# 探索の最大深度を入力するテキストボックス
+max_depth = st.sidebar.number_input("探索の最大深度:", min_value=1, value=2, step=1)
+
 
 if repo_url:
     repo_name = repo_url.split("/")[-1].split(".")[0]
     repo_path = clone_repository(repo_url, repo_name)
 
-    file_tree = get_file_tree(repo_path, ignore_patterns)
-    markdown_content = create_markdown_content(repo_name, file_tree, repo_path, ignore_patterns)
+    file_tree = get_file_tree(repo_path, ignore_patterns, max_depth)
+    markdown_content = create_markdown_content(repo_name, file_tree, repo_path, ignore_patterns, max_depth)
 
     # マークダウンファイルを保存
     output_name =  "/tmp/__CodeLumiai"

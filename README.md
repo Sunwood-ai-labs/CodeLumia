@@ -54,12 +54,18 @@ CodeLumiaを使用して、プロジェクトのドキュメンテーション�
 
 ## 更新履歴
 
-### [[2024/04/13] CodeLumia v0.2.0](https://github.com/Sunwood-ai-labs/CodeLumia/releases/tag/v0.2.0)
-
+### [[2024/04/13] CodeLumia v0.3.0](https://github.com/Sunwood-ai-labs/CodeLumia/releases/tag/v0.3.0) 
+- アプリケーションの機能強化とドキュメントデザインの更新
+- デモGIFの更新 
+- `.CodeLumiaignore`のフォーマット更新とリファクタリング
+- READMEとSourceSageDocsの大幅な更新
+- GIFファイルのGit LFSでの追跡と誤記修正
+- 
+### [[2024/04/13] CodeLumia v0.2.0](https://github.com/Sunwood-ai-labs/CodeLumia/releases/tag/v0.2.0) 
 - コードのリファクタリングによる可読性と保守性の向上
 - リポジトリのURLを入力してファイルツリーとコードを表示する機能追加
 - ユーザーインターフェースの改善とドキュメンテーションの拡充
-- CI/CDの設定とREADMEファイルの更新
+- CI/CDの設定とREADMEファイルの更新---
 
 ### [2024/04/12] CodeLumia v0.1.0
 - 初回リリース
