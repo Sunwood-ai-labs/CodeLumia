@@ -171,3 +171,4 @@ LICENSE
 *.sqlite
 *.jpg
 requirements.txt
+LICENSE*
