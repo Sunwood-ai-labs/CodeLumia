@@ -30,7 +30,7 @@ st.markdown("---")
 # .gitignoreのパターンを編集するサイドバー
 st.sidebar.title(".CodeLumiaignore Patterns")
 ignore_patterns = st.sidebar.text_area("Enter patterns (one per line):", value="\n".join(ignore_patterns), height=300).split("\n")
-tmp_dir = st.sidebar.text_input('tmp_dir', './tmp')
+tmp_dir = st.sidebar.text_input('tmp_dir', '/tmp')
 # 探索の最大深度を入力するテキストボックス
 max_depth = st.sidebar.number_input("探索の最大深度:", min_value=1, value=1, step=1)
 
