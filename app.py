@@ -36,11 +36,12 @@ max_depth = st.sidebar.number_input("探索の最大深度:", min_value=1, value
 
 preview_markdown = st.sidebar.checkbox('preview markdown', value=False)
 preview_plaintext = st.sidebar.checkbox('preview plaintext', value=False)
+preview_tree = st.sidebar.checkbox('preview tree', value=True)
 
 if st.button("CodeLumia Run ...", type="primary"):
     if repo_url:
         repo_name = repo_url.split("/")[-1].split(".")[0]
-        with st.status("Scaning repository...", expanded=False):
+        with st.status("Scaning repository...", expanded=True):
             st.write("clone repository...")
             repo_path = clone_repository(repo_url, repo_name, tmp_dir=tmp_dir)
             st.write("get file tree...")
@@ -50,6 +51,8 @@ if st.button("CodeLumia Run ...", type="primary"):
 
         # マークダウンファイルを保存
         save_markdown_file(repo_name, markdown_content)
+        if(preview_tree):
+            st.code(f"{file_tree}")
 
         # Streamlitアプリケーションの構築
         if(preview_markdown):

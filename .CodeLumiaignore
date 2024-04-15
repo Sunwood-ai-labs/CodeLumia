@@ -172,3 +172,7 @@ LICENSE
 *.jpg
 requirements.txt
 LICENSE*
+*.zip
+environment.yml
+*.svg
+*.jpeg
