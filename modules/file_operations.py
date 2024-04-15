@@ -1,3 +1,4 @@
+
 import os
 import fnmatch
 
@@ -7,12 +8,17 @@ def get_file_tree(repo_path, ignore_patterns, max_depth):
         # .gitignoreに一致するディレクトリを無視
         dirs[:] = [d for d in dirs if not any(fnmatch.fnmatch(d, pattern) for pattern in ignore_patterns)]
         
-        level = root.replace(repo_path, "").count(os.sep)
+        level = root.replace(repo_path, "/").count(os.sep)
+        # print(f"------------------------- max_depth : {max_depth}")
+        # print(f"dirs1:{dirs}")
+        # print(f"level:{level}")
+        # print(f"files:{files}")
         if level > max_depth:
             continue
         
         indent = " " * 4 * (level)
         file_tree += f"{indent}{os.path.basename(root)}/\n"
+
         subindent = " " * 4 * (level + 1)
         for f in files:
             # .gitignoreに一致するファイルを無視
@@ -26,7 +32,7 @@ def process_files(repo_path, ignore_patterns, max_depth):
         # .gitignoreに一致するディレクトリを無視
         dirs[:] = [d for d in dirs if not any(fnmatch.fnmatch(d, pattern) for pattern in ignore_patterns)]
         
-        level = root.replace(repo_path, "").count(os.sep)
+        level = root.replace(repo_path, "/").count(os.sep)
         if level > max_depth:
             continue
         
@@ -38,3 +44,18 @@ def process_files(repo_path, ignore_patterns, max_depth):
                     content = f.read()
                     file_contents.append((file_path.replace(f'{repo_path}/', ''), content))
     return file_contents
+
+if __name__ == "__main__": 
+
+    repo_path = "tmp/DeepSeek-Math"
+    # .gitignoreのパターンを読み込む
+    ignore_patterns = []
+    if os.path.exists(".CodeLumiaignore"):
+        with open(".CodeLumiaignore", "r") as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith("#"):
+                    ignore_patterns.append(line)
+    max_depth = 1
+    file_tree = get_file_tree(repo_path, ignore_patterns, max_depth)
+    print(file_tree)
